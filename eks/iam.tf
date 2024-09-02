@@ -4,7 +4,7 @@ module "eks_role" {
 
   create_role         = true
   role_name           = "${var.cluster_name}-eks-role"
-  provider_url        = "oidc.eks.${var.region}.amazonaws.com/id/${module.eks.oidc_provider_id}"
+  provider_url        = "https://oidc.eks.${var.region}.amazonaws.com/id/${{module.eks.oidc_provider_id}"
   oidc_fully_qualified_subjects = ["system:serviceaccount:kube-system:aws-node"]
 
   role_policy_arns = [
@@ -21,7 +21,7 @@ module "node_role" {
 
   create_role         = true
   role_name           = "${var.cluster_name}-eks-node-role"
-  provider_url        = "oidc.eks.${var.region}.amazonaws.com/id/${module.eks.oidc_provider_id}"
+  provider_url        = "https://oidc.eks.${var.region}.amazonaws.com/id/${{module.eks.oidc_provider_id}"
   oidc_fully_qualified_subjects = ["system:serviceaccount:kube-system:aws-node"]
 
   role_policy_arns = [
