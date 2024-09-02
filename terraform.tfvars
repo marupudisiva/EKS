@@ -1,5 +1,5 @@
 # AWS region
-region = "us-west-2"
+region = "us-east-1"
 
 # EKS cluster name
 cluster_name = "my-eks-cluster"
@@ -22,7 +22,7 @@ public_subnets = [
 ]
 
 # EC2 instance type for EKS nodes
-instance_type = "t3.medium"
+instance_type = "t2.micro"
 
 # Desired number of EKS worker nodes
 desired_capacity = 2
