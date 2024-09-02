@@ -1,6 +1,6 @@
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "3.3.0"
+  version = ">= 3.3.0"
 
   name = "${var.cluster_name}-vpc"
   cidr = var.vpc_cidr

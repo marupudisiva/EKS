@@ -8,10 +8,10 @@ terraform {
     }
   }
 
-  # backend "s3" {
-  #   bucket = "terraform-s301896"
-  #   key    = "eks/terraform.tfstate"
-  #   region = "us-east-1"
-  #   dynamodb_table = "terraform-lock-table"
-  # }
+   backend "s3" {
+     bucket = "terraform-s301896"
+     key    = "eks/terraform.tfstate"
+     region = "us-east-1"
+     dynamodb_table = "terraform-lock-table"
+   }
 }
