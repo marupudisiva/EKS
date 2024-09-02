@@ -7,7 +7,7 @@ module "eks_role" {
   provider_url        = "oidc.eks.${var.region}.amazonaws.com/id/${module.eks.oidc_provider_id}"
   oidc_fully_qualified_subjects = ["system:serviceaccount:kube-system:aws-node"]
 
-  policy_arns = [
+  role_policy_arns = [
     "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
     "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController"
   ]
@@ -24,7 +24,7 @@ module "node_role" {
   provider_url        = "oidc.eks.${var.region}.amazonaws.com/id/${module.eks.oidc_provider_id}"
   oidc_fully_qualified_subjects = ["system:serviceaccount:kube-system:aws-node"]
 
-  policy_arns = [
+  role_policy_arns = [
     "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
     "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
   ]
