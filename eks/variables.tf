@@ -4,13 +4,13 @@ variable "region" {
   default     = "us-east-1"
 }
 
-variable "access_key" {
+variable "aws_access_key" {
   description = "AWS_ACCESS_KEY_ID"
   type        = string
   default     = "AKIA5ISKRRQMQMIHYLE3"
 }
 
-variable "secret_key" {
+variable "aws_secret_key" {
   description = "AWS_SECRET_ACCESS_KEY"
   type        = string
   default     = "phRod72YMyOO4XEn6mit6unruVVWvPHE8p+N3yEf"
