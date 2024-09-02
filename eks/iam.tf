@@ -17,7 +17,7 @@ module "eks_role" {
 
 module "node_role" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-assumable-role-with-oidc"
-  version = "4.3.0"
+  version = "5.44.0"
 
   create_role         = true
   role_name           = "${var.cluster_name}-eks-node-role"
